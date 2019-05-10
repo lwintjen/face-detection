@@ -1,6 +1,8 @@
 """
 Author: Loris Wintjens
-Goal : Face detection 
+Goal : Face detection of images using Haar Classifier method
+How to improve this script ? Adding a face recognition (live + photo + 3D models) 
+and make the current face detection a bit better
 """
 import cv2
 import numpy as np
@@ -20,8 +22,8 @@ for imgFile in fileNames:
     # as openCV face detector expects gray image, we convert the img
     imgCopyGray = cv2.cvtColor(imgCopy, cv2.COLOR_BGR2GRAY)
 
+    # apply haar classifier to detect faces and eyes
     facecascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
     eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
    
     faces = facecascade.detectMultiScale(imgCopyGray, scaleFactor=1.2, minNeighbors=5)
