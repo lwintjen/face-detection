@@ -9,6 +9,7 @@ import glob
 
 # read all the .jpg files in the working directory and put them into fileNames
 fileNames = [] 
+
 for file in glob.glob("*.jpg"):
     fileNames.append(file)
     
@@ -25,8 +26,8 @@ for imgFile in fileNames:
    
     faces = facecascade.detectMultiScale(imgCopyGray, scaleFactor=1.2, minNeighbors=5)
 
- 
-    print('Total number of Faces found',len(faces))
+    # print the number of face detected on the img
+    print('Total number of Faces found for: ', imgFile , ' ' ,len(faces))
     
     # we loop through the list of faces and draw rectangles on the image
     for (x, y, w, h) in faces:
@@ -39,3 +40,6 @@ for imgFile in fileNames:
         for (ex,ey,ew,eh) in eyes:
             eye_detect = cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(255,0,255),2)
             plt.imshow(eye_detect)
+    
+    cv2.imwrite('o_' + imgFile,imgCopy)
+    
