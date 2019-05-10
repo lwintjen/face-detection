@@ -6,7 +6,7 @@ This script will tell how many faces are on the image(s) and draw a rectangle ar
 
 ## What do you need ? <br />
 You'll need a few libraries : pythonCV, numpy, matplotlib. You can easily install them by using : <br />
-    <space>pip install library
+    + pip install library
 
 ## Examples <br />
 Here are some examples of this script: <br />
