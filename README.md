@@ -9,4 +9,11 @@ You'll need a few libraries : pythonCV, numpy, matplotlib. You can easily instal
     pip install library
 
 ## Examples <br />
-Here are some examples of this script.
+Here are some examples of this script: <br />
+
+![face7](https://user-images.githubusercontent.com/43049559/57556886-8bc93580-7378-11e9-8273-60e6dfef5152.jpg)
+
+![o_face7](https://user-images.githubusercontent.com/43049559/57556928-a1d6f600-7378-11e9-97bf-5d7e8c0527d9.jpg)
+
+
+
